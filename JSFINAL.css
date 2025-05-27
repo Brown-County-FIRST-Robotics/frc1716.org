@@ -3,6 +3,7 @@
 
 
 body{
+	font-family: Verdana, sans-serif;
 	background-image: linear-gradient(#3D3D3D, #1D1D1D);
 	background-color: #1D1D1D;
 	background-repeat: no-repeat;
@@ -11,66 +12,12 @@ body{
 	margin: 0;
 	color: #fff
 }
-
-img{
-	width:300px;
-}
-#transition{
-	color: #FFFFFF;
-	font-size: 2em;
-	margin:20px;
-	
-	transition-property: font-size, color, margin;
-	transition-duration: 3s;
-	transition-delay: 0.1s;
-	transition-timing-function: ease-in-out 0s;
-}
-#transition:hover{
-	color: #86002E;
-	font-size: 3em;
-	margin:0px;
-	
-	transition-property: font-size, color, margin;
-	transition-duration: .2s;
-	transition-delay: 0.1s;
-	transition-timing-function: ease-in-out 0s;
-}
-
-#animation{
-	animation-name: animate;
-	animation-duration:1s;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
-	animation-delay: 2s
-}
-
-@keyframes animate {
-	0% {
-		transform: rotateZ(0deg) rotateX(0deg) rotateY(20deg);;
-	}
-	25% {
-		transform: rotateZ(30deg) rotateX(55deg) rotateY(0deg);
-	}
-	50% {
-		transform: rotateZ(0deg) rotateX(0deg) rotateY(-20deg);
-	}
-	75% {
-		transform: rotateZ(-30deg) rotateX(-55deg) rotateY(0deg);
-	}
-	100% {
-		transform: rotateZ(0deg) rotateX(0deg) rotateY(20deg);
-	}
-}
-
+ img {
+	width:50%;
+ }
 #holder{
 	margin-left: 110px;
 	padding: 0;
-}
-.shade{
-	background-color: #3D3D3D;
-}
-.shader{
-	background-color: #1D1D1D;
 }
 
 main{
@@ -79,6 +26,9 @@ main{
 	text-align: center;
 	margin-bottom: 20px;
 }
+/* #innermain{
+	padding:30px;
+} */
 
 #coolrow{
 	color: #FF220C;
@@ -98,88 +48,13 @@ header{
 span{
 	font-style: italic;
 }
-
 .stylerabout{
 	background-color: #3D3D3D;
 	padding-bottom: 20px;
-	padding-top:20px;
-	display: grid;
-	grid-template-columns: auto auto;
-	column-gap: 10px;
-	row-gap:10px;}
-.stylerabout>div{
-	padding: 20px;
-	font-size: 30px;
-}
+	padding-top:20px;}
 .stylerabout2{
 	padding-bottom: 20px;
-	padding-top:20px;
-	display: grid;
-	grid-template-columns: auto auto;
-	column-gap: 10px;
-	row-gap:10px;}
-.stylerabout2>div{
-	padding: 20px;
-	font-size: 30px;
-	
-}
-
-
-.right{
-	grid-column-start: 1;
-	grid-column-end: 2;
-	grid-row-start: 1;
-	grid-row-end: 2;
-}
-.left{
-	grid-column-start: 2;
-	grid-column-end: 3;
-	grid-row-start: 1;
-	grid-row-end: 2;
-}
-
-
-
-
-
-.innerstylerabout{
-	background-color: #3D3D3D;
-	padding-bottom: 20px;
-	padding-top:20px;
-	display: grid;
-	grid-template-columns: auto auto;
-	column-gap: 10px;
-	row-gap:10px;}
-.innerstylerabout>div{
-	padding: 20px;
-	font-size: 30px;
-}
-.innerstylerabout2{
-	padding-bottom: 20px;
-	padding-top:20px;
-	display: grid;
-	grid-template-columns: auto auto;
-	column-gap: 10px;
-	row-gap:10px;}
-.innerstylerabout2>div{
-	padding: 20px;
-	font-size: 30px;
-	
-}
-
-
-.innerright{
-	grid-column-start: 1;
-	grid-column-end: 2;
-	grid-row-start: 1;
-	grid-row-end: 2;
-}
-.innerleft{
-	grid-column-start: 2;
-	grid-column-end: 3;
-	grid-row-start: 1;
-	grid-row-end: 2;
-}
+	padding-top:20px;}
 
 footer{
 	box-shadow: 0px -2px 10px 1px #FF220C;
@@ -212,6 +87,8 @@ nav{
 	top: 0;
 	left: 0;
 	box-shadow: 2px 0px 10px 1px #FF220C;
+	color: #707070;
+	text-shadow: #86002E 0px 1px 1px;
 }
 
 
@@ -221,7 +98,7 @@ hr{
 	border: 2px solid #86002E;
 }
 
-a#about, a#otherstuff, a#join {
+a#about, a#calender, a#join {
     display: inline-block;
 	text-decoration: none;
 	width: 300px;
@@ -229,25 +106,25 @@ a#about, a#otherstuff, a#join {
 	background-repeat: no-repeat;
 	background-size: contain;
 	color:#fff;
-	text-shadow: 1px 1px 1px #86002E, -1px -1px 1px #86002E;
+	text-shadow: 1px 1px 1px #FF220C, -1px -1px 1px #FF220C;
 	font-size: 3em;
 	margin:10px;
 	margin-left:20px;
 	margin-right:20px;
 	
 	transition-property: font-size, color, text-shadow;
-	transition-duration: .2s;
+	transition-duration: .5s;
 	transition-delay: 0.1s;
 	transition-timing-function: ease-in-out 0s;
 } 
-a#about:hover, a#otherstuff:hover, a#join:hover {
+a#about:hover, a#calender:hover, a#join:hover {
 	background-repeat: no-repeat;
 	background-size: contain;
 	color:#9B9B9B;
-	text-shadow: 3px 3px 1px #FF220C, -3px -3px 1px #FF220C;
+	text-shadow: 3px 3px 1px #86002E, -3px -3px 1px #86002E;
 	
 	transition-property: font-size, color, text-shadow;
-	transition-duration: .2s;
+	transition-duration: .5s;
 	transition-delay: 0.1s;
 	transition-timing-function: ease-in-out 0s;
 } 
@@ -278,12 +155,12 @@ nav li {
 	margin-bottom: 0;
 	width: 110px;
 }
-
 nav a:visited{
 	color: #707070;
 }
 nav a:hover {
-	color: gray;
+	color: #cacaca;
+	text-shadow: #FF220C 0px 1px 1px;
 }
 nav a:link {
 	color: #fff;
@@ -292,10 +169,8 @@ nav a:link {
 	width: 100%;
 }
 #logo{
-	position: fixed;
-	top: 10px;
-	left: 10px;
 	width: 100px;
+	margin-top:5px;
 }
 #tab{
 	background-color: #86002E;
