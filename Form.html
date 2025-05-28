@@ -2,184 +2,184 @@
 <!--This Page is the page with Form Oscar Avery-->
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Redbird Robotics</title>
-	<link rel = "stylesheet" href = "style.css">
-	<script src="app.js"></script>
-	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico">
+    <meta charset="utf-8">
+    <title>Redbird Robotics</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico">
 </head>
 
 <body>
-	
-	<nav>
-		<img id="logo" src="images/OldLogoTransparent.png" alt="image">
-		<ul>
-			<hr>
-			<li><a href="index.html">Home</a></li>
-			<hr>
-			<li><a href="About.html">About</a></li>
-			<hr>
-			<li><a href="Calender.html">Events and Updates</a></li>
-			<hr>
-			<li id="tab"><a href="Form.html">Join the team</a></li>
-			<hr>
-		</ul>
-	</nav>
-	
-	<div id="holder">
-	<header>
-		
-		<h1>Come join the team!</h1>
-		<h3>Fill out the form if you are even a bit interested</h3>
-		
-	</header>
-	
-	
-	
-	<main>
-		<br>
-		<h2>Enter to apply to join</h2>
-	
-		<br>
-		<form method="post" action="https://webdevbasics.net/scripts/demo.php">
-			<fieldset>
-				<h3>Personal info</h3>
 
-				<!-- get first name using text input -->
-				<label for="firstName">First Name:</label>
-				<input type="text" name="firstName" id="firstName">
+<nav>
+    <img id="logo" src="images/OldLogoTransparent.png" alt="image">
+    <ul>
+        <hr>
+        <li><a href="index.html">Home</a></li>
+        <hr>
+        <li><a href="About.html">About</a></li>
+        <hr>
+        <li><a href="Calender.html">Events and Updates</a></li>
+        <hr>
+        <li id="tab"><a href="Form.html">Join the team</a></li>
+        <hr>
+    </ul>
+</nav>
 
-				<br>
-				<br>
+<div id="holder">
+    <header>
+
+        <h1>Come join the team!</h1>
+        <h3>Fill out the form if you are even a bit interested</h3>
+
+    </header>
 
 
-				<!--get last name using text input-->
-				<label for="lastName">Last Name:</label>
-				<input type="text" name="lastName" id="lastName">
+    <main>
+        <br>
+        <h2>Enter to apply to join</h2>
+
+        <br>
+        <form method="post" action="https://webdevbasics.net/scripts/demo.php">
+            <fieldset>
+                <h3>Personal info</h3>
+
+                <!-- get first name using text input -->
+                <label for="firstName">First Name:</label>
+                <input type="text" name="firstName" id="firstName">
+
+                <br>
+                <br>
 
 
-				<br>
-				<br>
-
-				<!-- get an email and verify it is an email -->
-				<label for="email">Email:</label>
-				<input type="email" name="email" id="email">
+                <!--get last name using text input-->
+                <label for="lastName">Last Name:</label>
+                <input type="text" name="lastName" id="lastName">
 
 
-				<br>
-				<br>
+                <br>
+                <br>
 
-				<!-- form control input type:  date -->
-				<label for="date1">What Is The date</label>
-				<input type="date" name="date1" id="date1">
-
-			</fieldset>
-			<br>
-			<hr>
-			<br>
-
-			<div>
-				<fieldset>
-					<legend>What skill would you like to learn or help with</legend>
-					<input type="checkbox" name="skill[]" id="1">
-					<label for="1">Electrical engineering</label><br>
-
-					<input type="checkbox" name="skill[]" id="2">
-					<label for="2">Mechanical engineering</label><br>
-
-					<input type="checkbox" name="skill[]" id="3">
-					<label for="3">Computer Aided Design</label><br>
-
-					<input type="checkbox" name="skill[]" id="4">
-					<label for="4">Programming</label><br>
-
-					<input type="checkbox" name="skill[]" id="5">
-					<label for="5">Business</label>
-				</fieldset>
-			</div>
-		
-
-		<br>
-
-			<div>
-				<label for="availability">What is your availability from January to May?</label>
-				<select id="availability" name="availability">
-					<option>Which applies to you</option>
-					<option value="0">0 days a week</option>
-					<option value="1">1 day a week</option>
-					<option value="2-3">2-3 days a week</option>
-					<option value="more than 3">more than 3 days a week</option>
-				</select>
-			</div>
-
-			<br>
-			<hr>
-			<br>
-			<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-			<script>
-				(function() {//stuff I stole
-					emailjs.init("LRkGrbN1b5k_-PugG"); // Replace with your EmailJS user ID
-				})();
-				function getCheckedSkills() {
-					const checkedSkills = document.querySelectorAll('input[name="skill[]"]:checked');
-					const selected = [];
-
-					checkedSkills.forEach((checkbox) => {
-					  selected.push(checkbox.nextElementSibling.textContent.trim());
-					});
-
-					console.log("Selected Skills:", selected);
-					return selected;
-				 }
-				 //av
-			  	function sendEmail(event) {
-					if (event) event.preventDefault();
-				  	//TImrbrp@1716
-					const fname = document.getElementById("firstName").value;
-					const lname = document.getElementById("lastName").value;
-					const availability1 = document.getElementById("availability").value;
-					const email1 = document.getElementById("email").value;
-					let subteam1 = getCheckedSkills();
+                <!-- get an email and verify it is an email -->
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email">
 
 
+                <br>
+                <br>
 
-					const templateParams = {
-						name: `${fname} ${lname}`,
-						email: email1,
-						subteam: subteam1.join(", "),  // Ensure it's sent as a string
-						Avalibility: `${availability1} day(s) a week`,
-					};
+                <!-- form control input type:  date -->
+                <label for="date1">What Is The date</label>
+                <input type="date" name="date1" id="date1">
 
-					emailjs.send("service_48h3rx8", "template_yo32j09", templateParams)
-					  .then(response => {
-						console.log("Email sent successfully!", response.status, response.text);
-						window.location.href = "Thank_you.html";
-					  })
-					  .catch(error => {
-						console.error("Failed to send email.", error);
-						alert("Failed to send email. Please try again.");
-					  });
-				  }
-			</script>
-			
-			<div class = "abutton">
-				<a onclick="sendEmail(event)" href="#">Submit</a>
-			</div>
+            </fieldset>
+            <br>
+            <hr>
+            <br>
 
-			<br>
+            <div>
+                <fieldset>
+                    <legend>What skill would you like to learn or help with</legend>
+                    <input type="checkbox" name="skill[]" id="1">
+                    <label for="1">Electrical engineering</label><br>
 
-			<div class = "abutton">
-				<input id = "reset" type="reset" value="Reset">
-			</div>
-			
-		</form>
-	</main>
-	
-	<footer>
-		<p>Redbird Robotics team 1716</p>
-		<p>By: Oscar Avery <a href = "mailto:ozzymavery@gmail.com">ozzymavery@gmail.com</a> &copy;5-16-2025</p>
-		
-	</footer>
-	</div>
+                    <input type="checkbox" name="skill[]" id="2">
+                    <label for="2">Mechanical engineering</label><br>
+
+                    <input type="checkbox" name="skill[]" id="3">
+                    <label for="3">Computer Aided Design</label><br>
+
+                    <input type="checkbox" name="skill[]" id="4">
+                    <label for="4">Programming</label><br>
+
+                    <input type="checkbox" name="skill[]" id="5">
+                    <label for="5">Business</label>
+                </fieldset>
+            </div>
+
+
+            <br>
+
+            <div>
+                <label for="availability">What is your availability from January to May?</label>
+                <select id="availability" name="availability">
+                    <option>Which applies to you</option>
+                    <option value="0">0 days a week</option>
+                    <option value="1">1 day a week</option>
+                    <option value="2-3">2-3 days a week</option>
+                    <option value="more than 3">more than 3 days a week</option>
+                </select>
+            </div>
+
+            <br>
+            <hr>
+            <br>
+            <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+            <script>
+                (function () {//stuff I stole
+                    emailjs.init("LRkGrbN1b5k_-PugG"); // Replace with your EmailJS user ID
+                })();
+
+                function getCheckedSkills() {
+                    const checkedSkills = document.querySelectorAll('input[name="skill[]"]:checked');
+                    const selected = [];
+
+                    checkedSkills.forEach((checkbox) => {
+                        selected.push(checkbox.nextElementSibling.textContent.trim());
+                    });
+
+                    console.log("Selected Skills:", selected);
+                    return selected;
+                }
+
+                //av
+                function sendEmail(event) {
+                    if (event) event.preventDefault();
+                    //TImrbrp@1716
+                    const fname = document.getElementById("firstName").value;
+                    const lname = document.getElementById("lastName").value;
+                    const availability1 = document.getElementById("availability").value;
+                    const email1 = document.getElementById("email").value;
+                    let subteam1 = getCheckedSkills();
+
+
+                    const templateParams = {
+                        name: `${fname} ${lname}`,
+                        email: email1,
+                        subteam: subteam1.join(", "),  // Ensure it's sent as a string
+                        Avalibility: `${availability1} day(s) a week`,
+                    };
+
+                    emailjs.send("service_48h3rx8", "template_yo32j09", templateParams)
+                        .then(response => {
+                            console.log("Email sent successfully!", response.status, response.text);
+                            window.location.href = "Thank_you.html";
+                        })
+                        .catch(error => {
+                            console.error("Failed to send email.", error);
+                            alert("Failed to send email. Please try again.");
+                        });
+                }
+            </script>
+
+            <div class="abutton">
+                <a onclick="sendEmail(event)" href="#">Submit</a>
+            </div>
+
+            <br>
+
+            <div class="abutton">
+                <input id="reset" type="reset" value="Reset">
+            </div>
+
+        </form>
+    </main>
+
+    <footer>
+        <p>Redbird Robotics team 1716</p>
+        <p>By: Oscar Avery <a href="mailto:ozzymavery@gmail.com">ozzymavery@gmail.com</a> &copy;5-16-2025</p>
+
+    </footer>
+</div>
 </body>
 </html>
