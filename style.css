@@ -111,7 +111,7 @@ a#about, a#calender, a#join {
 	margin:10px;
 	margin-left:20px;
 	margin-right:20px;
-	
+
 	transition-property: font-size, color, text-shadow;
 	transition-duration: .5s;
 	transition-delay: 0.1s;
@@ -129,13 +129,13 @@ a#about:hover, a#calender:hover, a#join:hover {
 	transition-timing-function: ease-in-out 0s;
 } 
 #about{
-	background-image: url("IMG(better)/IUIO0820.JPG");
+	background-image: url("IMG(better)/IUIO0820.JPG"); /*REMOVED*/
 }
 #otherstuff{
-	background-image: url("IMG(better)/IMG_E1915.JPG");
+	background-image: url("IMG(better)/IMG_E1915.JPG"); /*REMOVED*/
 }
 #join{
-	background-image: url("images/IMG_1750.JPG");
+	background-image: url("images/IMG_1750.png");
 }
 
 nav a {
