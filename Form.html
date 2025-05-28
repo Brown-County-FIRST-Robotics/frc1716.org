@@ -136,15 +136,15 @@
                 function sendEmail(event) {
                     if (event) event.preventDefault();
                     //TImrbrp@1716
-                    const fname = document.getElementById("firstName").value;
-                    const lname = document.getElementById("lastName").value;
+                    const first_name = document.getElementById("firstName").value;
+                    const last_name = document.getElementById("lastName").value;
                     const availability1 = document.getElementById("availability").value;
                     const email1 = document.getElementById("email").value;
                     let subteam1 = getCheckedSkills();
 
 
                     const templateParams = {
-                        name: `${fname} ${lname}`,
+                        name: `${first_name} ${last_name}`,
                         email: email1,
                         subteam: subteam1.join(", "),  // Ensure it's sent as a string
                         Avalibility: `${availability1} day(s) a week`,
@@ -162,13 +162,13 @@
                 }
             </script>
 
-            <div class="abutton">
+            <div class="a_button">
                 <a onclick="sendEmail(event)" href="#">Submit</a>
             </div>
 
             <br>
 
-            <div class="abutton">
+            <div class="a_button">
                 <input id="reset" type="reset" value="Reset">
             </div>
 
